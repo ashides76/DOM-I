@@ -39,4 +39,60 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
   },
 };
 
-console.log('project wired!')
+// header - nav
+
+const anchor = document.querySelectorAll('nav a');
+anchor[0].textContent = siteContent['nav']['nav-item-1'];
+anchor[1].textContent = siteContent['nav']['nav-item-2'];
+anchor[2].textContent = siteContent['nav']['nav-item-3'];
+anchor[3].textContent = siteContent['nav']['nav-item-4'];
+anchor[4].textContent = siteContent['nav']['nav-item-5'];
+anchor[5].textContent = siteContent['nav']['nav-item-6'];
+const anchorArr = Array.from(anchor)
+anchorArr.map(val => val.classList = 'italic')
+// section cta
+
+document.querySelector('h1').textContent = siteContent['cta']['h1']
+document.querySelector('button').textContent = siteContent['cta']['button']
+
+
+// section main-content
+
+const h4 = document.querySelectorAll('.main-content h4')
+const p = document.querySelectorAll('.main-content p')
+h4[0].textContent = siteContent['main-content']['features-h4'];
+p[0].textContent = siteContent['main-content']['features-content'];
+h4[1].textContent = siteContent['main-content']['about-h4'];
+p[1].textContent = siteContent['main-content']['about-content'];
+h4[2].textContent = siteContent['main-content']['services-h4'];
+p[2].textContent = siteContent['main-content']['services-content'];
+h4[3].textContent = siteContent['main-content']['product-h4'];
+p[3].textContent = siteContent['main-content']['product-content'];
+h4[4].textContent = siteContent['main-content']['vision-h4'];
+p[4].textContent = siteContent['main-content']['vision-content'];
+
+// contact
+
+document.querySelector('.contact h4').textContent = siteContent['contact']['contact-h4']
+const pContact = document.querySelectorAll('.contact p')
+console.log(pContact)
+pContact[0].classList.add('address');
+pContact[1].classList.add('phone');
+pContact[2].classList.add('email');
+const address = document.querySelector('.address')
+address.textContent = siteContent['contact']['address']
+const phone = document.querySelector('.phone')
+phone.textContent = siteContent['contact']['phone']
+const email = document.querySelector('.email');
+email.textContent = siteContent['contact']['email']
+
+// footer
+
+document.querySelector('footer a').textContent = siteContent['footer']['copyright']
+console.log(document.querySelector('footer'))
+document.querySelector('footer a').classList.add('bold');
+
+// image
+document.querySelector('#logo-img').src = siteContent['images']['logo-img'];
+document.querySelector('#cta-img').src = siteContent['images']['cta-img'];
+document.querySelector('#middle-img').src = siteContent['images']['accent-img'];
