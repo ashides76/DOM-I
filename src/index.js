@@ -41,15 +41,26 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 
 // header - nav
 
-const anchor = document.querySelectorAll('nav a');
-anchor[0].textContent = siteContent['nav']['nav-item-1'];
-anchor[1].textContent = siteContent['nav']['nav-item-2'];
-anchor[2].textContent = siteContent['nav']['nav-item-3'];
-anchor[3].textContent = siteContent['nav']['nav-item-4'];
-anchor[4].textContent = siteContent['nav']['nav-item-5'];
-anchor[5].textContent = siteContent['nav']['nav-item-6'];
-const anchorArr = Array.from(anchor)
-anchorArr.map(val => val.classList = 'italic')
+// const anchor = document.querySelectorAll('nav a');
+// anchor[0].textContent = siteContent['nav']['nav-item-1'];
+// anchor[1].textContent = siteContent['nav']['nav-item-2'];
+// anchor[2].textContent = siteContent['nav']['nav-item-3'];
+// anchor[3].textContent = siteContent['nav']['nav-item-4'];
+// anchor[4].textContent = siteContent['nav']['nav-item-5'];
+// anchor[5].textContent = siteContent['nav']['nav-item-6'];
+// const anchorArr = Array.from(anchor)
+// anchorArr.map(val => val.classList = 'italic')
+
+const links = document.querySelectorAll('nav a');
+// console.log(links)
+const linksVal = Object.values(siteContent.nav)
+// console.log(linksVal)
+links.forEach((val, ind) => {
+  val.textContent = linksVal[ind];
+  val.classList = 'italic';
+})
+
+
 // section cta
 
 document.querySelector('h1').textContent = siteContent['cta']['h1']
@@ -71,11 +82,13 @@ p[3].textContent = siteContent['main-content']['product-content'];
 h4[4].textContent = siteContent['main-content']['vision-h4'];
 p[4].textContent = siteContent['main-content']['vision-content'];
 
+
+
 // contact
 
 document.querySelector('.contact h4').textContent = siteContent['contact']['contact-h4']
 const pContact = document.querySelectorAll('.contact p')
-console.log(pContact)
+// console.log(pContact)
 pContact[0].classList.add('address');
 pContact[1].classList.add('phone');
 pContact[2].classList.add('email');
@@ -89,7 +102,6 @@ email.textContent = siteContent['contact']['email']
 // footer
 
 document.querySelector('footer a').textContent = siteContent['footer']['copyright']
-console.log(document.querySelector('footer'))
 document.querySelector('footer a').classList.add('bold');
 
 // image
